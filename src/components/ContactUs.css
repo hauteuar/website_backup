@@ -1,0 +1,37 @@
+.input-group {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line if needed */
+    align-items: center; /* Aligns items vertically */
+    gap: 10px; /* Adds some space between the label and input */
+    margin-bottom: 15px; /* Adds space between each input group */
+  }
+  
+  .input-group label {
+    flex-basis: 20%; /* Adjust this value as needed */
+    min-width: 100px; /* Adjust this value as needed */
+    margin-right: 10px; /* Ensures space between label and input */
+  }
+  
+  .input-group input,
+  .input-group textarea {
+    flex-grow: 1; /* Input takes up remaining space */
+    min-width: 200px; /* Adjust this value as needed */
+  }
+  
+  /* You might want to add media queries for smaller screens */
+  @media (max-width: 600px) {
+    .input-group {
+      flex-direction: column; /* Stack on small screens */
+    }
+  
+    .input-group label {
+      flex-basis: auto; /* Adjust basis to auto on small screens */
+      width: 100%; /* Full width on small screens */
+    }
+  
+    .input-group input,
+    .input-group textarea {
+      width: 100%; /* Full width on small screens */
+    }
+  }
+  

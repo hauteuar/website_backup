@@ -1,0 +1,130 @@
+/* index.css or global.css */
+/* Add this to your global.css or the relevant component's CSS module */
+
+.content {
+  padding-top: 70px; /* Adjust this value to the height of your header */
+  margin: 0 auto; /* Centers the content */
+  padding: 0 15px; /* Adds padding inside the container */
+  max-width: 1200px; /* Maximum width of the content */
+  width: 100%; /* Makes the width responsive */
+}
+.main-content {
+  padding-top: 150px; /* Replace [heightOfYourHeader] with the actual height */
+  scroll-behavior: smooth;
+}
+.active-link {
+  text-decoration: underline;
+}
+
+.hero-background {
+  width: 100%;
+  color: whitesmoke;
+  font-family: 'Montserrat', 'Open Sans',
+    dualspace;
+
+  background: black; /* Fallback color */
+ /* background: url('../public/texture1.png') center center; */
+  /*background-size: cover;
+  height: 100vh; /* Adjust the height as needed */
+}
+.hero-section {
+  padding-top: 70px; /* Adjust this value to the height of your header */
+  color: aqua;
+  /* Other styles */
+}
+body {
+  margin: 0; /* Removes default margin */
+  padding-top:60px /* Height of your header */; /* Ensures content starts below the header */
+}
+
+
+.rest-of-the-page {
+  background-color: black;
+  color: white;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  overflow-x: hidden; /* Prevents horizontal overflow */
+  width: 100vw; /* Ensures it spans the full viewport width */
+  max-width: 100%; /* Prevents extending beyond the viewport */
+  position: relative; /* If you need to position children absolutely within */
+  box-sizing: border-box; 
+}
+
+body {
+  overflow-x: hidden;
+}
+
+code {
+  color: white;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* In your global.css or a component's CSS module */
+
+para {
+  color: lightseagreen;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Testimonials Container */
+.testimonials-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Individual Testimonial Box */
+.testimonial-box {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  max-width: 400px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Testimonial Text */
+.testimonial-text {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* Testimonial Info (Name, Position, Company) */
+.testimonial-info {
+  text-align: right;
+}
+
+.testimonial-info h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.testimonial-info p {
+  font-size: 14px;
+  margin: 0;
+  color: #888;
+}
+
+.howitworks:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.app-container {
+    position: relative; /* Allows MovingParticles to position itself */
+    width: 100vw;
+    height: 100vh; /* Ensure it covers the entire viewport */
+    z-index: 5;
+}

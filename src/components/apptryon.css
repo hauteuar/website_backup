@@ -1,0 +1,27 @@
+
+/* Add this to your App.css or a similar file */
+@keyframes loading {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.ProgressBarContainer {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.ProgressBar {
+    height: 20px;
+    background-color: #4caf50;
+    width: 0%;
+    border-radius: 5px;
+    animation: loading 2s linear forwards;
+}
+

@@ -1,0 +1,95 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  background-color: black;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0 8px; /* Adjust padding as needed */
+  padding-left: 1px; 
+}
+
+.header > div {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  gap: 15px;
+}
+
+.menu-toggle {
+  display: none; /* Hide toggle button on larger screens */
+  cursor: pointer;
+}
+
+/* Example CSS for sections that will be scrolled into view */
+.section {
+  /* Add padding-top equal to or greater than the height of your fixed header */
+  padding-top: 70px; /* Adjust this value to match your fixed header's height */
+  margin-top: -70px; /* Negative margin equal to padding to maintain document flow */
+  scroll-margin-top: 70px; /* This is a newer property that works in most modern browsers */
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Show toggle button on mobile */
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    display: none; /* Hide by default, controlled by React state */
+    background-color: black; /* Match header background */
+    padding-top: 20px; /* Add some spacing */
+  }
+
+  /* Ensure nav is displayed when menuOpen is true, handled by React */
+  .header nav {
+    display: flex; /* Override this with React state in your component */
+  }
+  .header > div {
+    flex-shrink: 0; /* Prevents the div from shrinking smaller than its content */
+  }
+  .header {
+   /* Removes padding on the left */
+  }
+  
+  .logo-container {
+    margin-left: 0; /* Aligns logo to the far left */
+    padding-left: 1rem; /* Adds a little space from the edge */
+  }
+  /* For social icons specifically */
+  .social-icons {
+    margin-right: 1rem; /* Adjust as needed for spacing on the right */
+    overflow: visible; /* Ensures content is not clipped */
+  }
+  /* Adjust for smaller screens */
+  .header > div, .header nav, .header .menu-toggle {
+    width: 100%; /* Full width */
+  }
+
+  .header nav a {
+    text-align: center; /* Center align links */
+  }
+
+  .header > div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Ensure nav and social icons are displayed on larger screens */
+@media (min-width: 769px) {
+  nav, .header > div:last-child {
+    display: flex !important; /* Force display */
+  }
+}

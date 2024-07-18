@@ -1,0 +1,10 @@
+/* styles.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    /* Other flex properties */
+}
+img {
+    max-width: 100%;
+    height: auto;
+}

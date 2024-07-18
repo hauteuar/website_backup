@@ -1,0 +1,27 @@
+/* partners.css */
+.partners-section {
+    text-align: center;
+}
+
+.partners-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap; /* Prevents wrapping by default, adjust as necessary */
+    overflow-x: auto; /* Allows horizontal scrolling for many logos */
+}
+
+.partner-logo img {
+    height: 75px; /* Fixed height for common size */
+    width: auto; /* Adjusts width automatically to maintain aspect ratio */
+    object-fit: contain; /* Ensures the image's aspect ratio is preserved */
+    margin: 15px;
+}
+
+@media (max-width: 768px) {
+    .partners-list {
+        flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+        justify-content: space-around; /* Evenly distributes space around items */
+    }
+}

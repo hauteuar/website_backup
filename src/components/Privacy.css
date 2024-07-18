@@ -1,0 +1,11 @@
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.blinking-link {
+    animation: blinker 1s linear infinite;
+    color: #0094ff; /* Change the color as needed */
+    font-weight: bold; /* Optional: makes the link text bold */
+}
